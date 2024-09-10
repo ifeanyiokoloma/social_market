@@ -7,7 +7,6 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import Image from "next/image";
 import Logo from "./Logo";
 
 const Mobile = () => {
