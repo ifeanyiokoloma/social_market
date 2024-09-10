@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../globals.css";
 import {
   appWebsite,
   authorUrl,
@@ -7,9 +7,7 @@ import {
   siteName,
   siteUserName,
 } from "@/lib/utils";
-import "@fontsource-variable/roboto-condensed";
-// Supports weights 100-900
-import '@fontsource-variable/roboto-slab';
+import Navbar from "../components/Navbar";
 
 export const metadata: Metadata = {
   title: `${brandName}- Shop, Sell, and Connect`,
@@ -32,18 +30,15 @@ export const metadata: Metadata = {
   robots: "index, follow",
 };
 
-export default function RootLayout({
+export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <main>
+      <Navbar />
+      {children}
+    </main>
   );
 }
