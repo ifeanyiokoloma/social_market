@@ -13,6 +13,8 @@ export const appWebsite = "yumarket.netlify.app";
 
 export const siteName = "Perfect Market Site";
 
+export const siteUserName = "Perfect_market_site";
+
 export const phone = +2349014967299;
 
 export const email = "ifeanyiokoloma";
