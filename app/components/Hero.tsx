@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div>
-      <section className="flex flex-col-reverse h-screen container mx-auto md:flex-row md:justify-evenly">
+    <>
+      <section className="flex flex-col-reverse h-screen md:flex-row md:justify-evenly">
         <div className="px-4 md:pl-10 sm:max-w-md md:h-full flex flex-col justify-center md:w-1/2 mt-4 bg-transparent">
           <div className="flex flex-col gap-2 mb-4 md:gap-6">
             <h1 className="text-4xl sm:text-5xl text-gold font-semibold">
@@ -25,7 +25,7 @@ const Hero = () => {
           />
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

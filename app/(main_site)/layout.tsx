@@ -36,9 +36,9 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <main>
+    <>
       <Navbar />
-      {children}
-    </main>
+      <div className="container mx-auto">{children}</div>
+    </>
   );
 }
