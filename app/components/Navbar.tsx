@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   return (
-    <nav className="h-12 flex flex-col justify-center fixed w-full bg-dark-gold">
+    <nav className="h-12 flex flex-col justify-center sticky top-0 w-full bg-dark-gold">
       <div className="container mx-auto flex justify-between items-center px-4">
         <Sheet>
           <SheetTrigger asChild>
