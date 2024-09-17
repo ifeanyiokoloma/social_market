@@ -11,8 +11,8 @@ const page = () => {
         </p>
       </header>
 
-      <main>
-        <section>
+      <main className="flex flex-col gap-y-8 text-zinc-400 text-justify">
+        <section className="flex flex-col gap-y-1">
           <h2>1. Introduction</h2>
           <p>
             Welcome to the Awka Online Marketplace. Your privacy is important to
@@ -21,12 +21,12 @@ const page = () => {
           </p>
         </section>
 
-        <section>
+        <section className="flex flex-col gap-y-1">
           <h2>2. Information We Collect</h2>
           <p>
             We may collect the following types of personal information from you:
           </p>
-          <ul>
+          <ul className="flex flex-col gap-y-3">
             <li>
               <strong>Account Information:</strong> Name, email address, phone
               number, and payment details when you create an account or make a
@@ -50,7 +50,7 @@ const page = () => {
         <section >
           <h2>3. How We Use Your Information</h2>
           <p>We use the information collected for the following purposes:</p>
-          <ul>
+          <ul className="flex flex-col gap-y-3">
             <li>To create and manage your account.</li>
             <li>To process payments and deliver products.</li>
             <li>
@@ -62,13 +62,13 @@ const page = () => {
           </ul>
         </section>
 
-        <section>
+        <section className="flex flex-col gap-y-1">
           <h2>4. Sharing of Information</h2>
           <p>
             We do not share your personal information with third parties except
             in the following cases:
           </p>
-          <ul>
+          <ul className="flex flex-col gap-y-3">
             <li>
               <strong>Service Providers:</strong> We may share data with payment
               processors, delivery services, and other vendors to fulfill our
@@ -85,7 +85,7 @@ const page = () => {
           </ul>
         </section>
 
-        <section>
+        <section className="flex flex-col gap-y-1">
           <h2>5. Cookies and Tracking</h2>
           <p>
             We use cookies and similar tracking technologies to improve your
@@ -94,7 +94,7 @@ const page = () => {
           </p>
         </section>
 
-        <section>
+        <section className="flex flex-col gap-y-1">
           <h2>6. Data Security</h2>
           <p>
             We take the security of your personal data seriously. We use
@@ -103,7 +103,7 @@ const page = () => {
           </p>
         </section>
 
-        <section>
+        <section className="flex flex-col gap-y-1">
           <h2>7. Your Rights</h2>
           <p>You have the right to:</p>
           <ul className="flex flex-col gap-y-3">
@@ -113,7 +113,7 @@ const page = () => {
           </ul>
         </section>
 
-        <section>
+        <section className="flex flex-col gap-y-1">
           <h2>8. Changes to This Privacy Policy</h2>
           <p>
             We may update this Privacy Policy from time to time. You will be
@@ -122,7 +122,7 @@ const page = () => {
           </p>
         </section>
 
-        <section>
+        <section className="flex flex-col gap-y-1">
           <h2>9. Contact Us</h2>
           <p>
             If you have any questions or concerns about this Privacy Policy,
