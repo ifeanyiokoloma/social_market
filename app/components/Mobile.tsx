@@ -18,9 +18,9 @@ const Mobile = () => {
       >
         <SheetHeader>
           <SheetTitle>
-            <SheetClose>
-            <Logo />
-          </SheetClose>
+            <SheetClose asChild>
+              <Logo />
+            </SheetClose>
           </SheetTitle>
           <SheetDescription>
             Make changes to your profile here. Click save when you are done.

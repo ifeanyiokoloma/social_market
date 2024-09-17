@@ -2,13 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global Resets */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Glassmorphism */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
 :root {
+  /* Default light mode colors */
   --background: #ffffff;
   --foreground: #171717;
+  --gold: linear-gradient(
+    to left bottom,
+    #211102,
+    #3b220f,
+    #573514,
+    #734a18,
+    #8f611a,
+    #a0701b,
+    #b17f1b,
+    #c18f1a,
+    #cd981a,
+    #d8a219,
+    #e4ab18,
+    #f0b517
+  );
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    /* Dark mode colors */
     --background: black;
     --foreground: #ededed;
     --gold: linear-gradient(
@@ -29,18 +60,55 @@
   }
 }
 
+/* Theme Class for Gold */
+.theme-gold {
+  --gold: linear-gradient(
+    to left bottom,
+    #211102,
+    #3b220f,
+    #573514,
+    #734a18,
+    #8f611a,
+    #a0701b,
+    #b17f1b,
+    #c18f1a,
+    #cd981a,
+    #d8a219,
+    #e4ab18,
+    #f0b517
+  );
+  --gold-dark: #8f611a;
+}
+
+/* Body Styling */
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Roboto Condensed Variable", sans-serif;
+  font-family: "Roboto Condensed Variable", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
 }
 
+/* Layer for Utilities */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-col-gap-2 {
+    @apply flex flex-col gap-2;
+  }
+
+  .flex-gap-8-padded {
+    @apply flex flex-col gap-8 px-4 py-8;
+  }
 }
 
+/* Base Layer for Variables */
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -69,6 +137,7 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -97,6 +166,7 @@ body {
   }
 }
 
+/* Base Styles */
 @layer base {
   * {
     @apply border-border;
@@ -106,43 +176,118 @@ body {
   }
 }
 
-@layer base {
-  .text-gold {
-    background: var(--gold);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .bg-gold {
-    background: var(--gold);
-  }
-
-  .bg-dark-gold {
-    background: #8f611a;
-  }
-
-  .bg-secondary {
-    background: #8a2130;
-  }
-
-  .text-secondary {
-    color: #8a2130;
-  }
-
-  .roboto-c {
-    font-family: "Roboto Condensed Variable", sans-serif;
-  }
+/* Gold Text and Background Styling */
+.text-gold {
+  background: var(--gold);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
-@layer base {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Roboto Slab Variable", serif;
-  }
+.bg-gold {
+  background: var(--gold);
+}
+
+.bg-dark-gold {
+  background: #8f611a;
+}
+
+/* Text Colors */
+.text-secondary {
+  color: #008080;
+}
+
+.text-primary {
+  color: #d4af37;
+}
+
+/* Font Utilities */
+.roboto-c {
+  font-family: "Roboto Condensed Variable", sans-serif;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Slab Variable", serif;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  @apply text-4xl font-bold text-gold;
+}
+h2 {
+  @apply text-2xl font-semibold;
+}
+h3 {
+  @apply text-xl font-medium;
+}
+
+p, li {
+  @apply text-zinc-300
+}
+
+header > p {
+  @apply text-white
+}
+
+/* Layout and Spacing */
+header,
+section,
+ul,
+main {
+  @apply flex flex-col;
+}
+
+header,
+section,
+ul {
+  @apply gap-2;
+}
+
+main {
+  @apply gap-8 px-4 py-8;
+}
+
+/* Link Styling */
+a {
+  @apply hover:underline;
+}
+
+ul,
+ol {
+  @apply mb-4;
+  list-style: initial;
+  padding-left: 1.5rem;
+}
+ul {
+  list-style-type: disc;
+}
+ol {
+  list-style-type: decimal;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+
+.page {
+  @apply px-4 py-8
+}
+
+.text-content {
+  @apply max-w-xl mx-auto
+}
+
+.bg-primary {
+  @apply bg-[#8f611a]
+}
+
+.text-primary {
+  @apply text-[#8f611a]
 }

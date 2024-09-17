@@ -5,5 +5,5 @@ export default function Layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <main className="bg-primary">{children}</main>;
+  return <main className="container mx-auto">{children}</main>;
 }

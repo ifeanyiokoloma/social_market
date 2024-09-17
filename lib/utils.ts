@@ -5,16 +5,16 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export const brandName = "Perfect Market"
+export const brandName = "Perfekt Mart"
 
-export const authorUrl = "ifeanyiokoloma.netlify.app";
+export const authorUrl = "ifeanyiokoloma.com.ng";
 
-export const appWebsite = "yumarket.netlify.app";
+export const appWebsite = "perfektmart.com.ng";
 
-export const siteName = "Perfect Market Site";
+export const siteName = "Perfekt Mart";
 
-export const siteUserName = "Perfect_market_site";
+export const siteUserName = "perfektmart";
 
-export const phone = +2349014967299;
+export const phone = "+2349014967299";
 
-export const email = "ifeanyiokoloma";
+export const email = "ifeanyiokoloma@gmail.com";

@@ -9,7 +9,8 @@ import {
 } from "@/lib/utils";
 import "@fontsource-variable/roboto-condensed";
 // Supports weights 100-900
-import '@fontsource-variable/roboto-slab';
+import "@fontsource-variable/roboto-slab";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: `${brandName}- Shop, Sell, and Connect`,
@@ -39,10 +40,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`antialiased`}
-      >
-        {children}
+      <body className={`antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
